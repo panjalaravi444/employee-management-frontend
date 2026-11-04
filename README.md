@@ -87,7 +87,7 @@ frontend/
 │   │   └── authService.js      # Token storage and expiry check
 │   └── styles/                 # One CSS file per area
 ├── .gitignore
-├── AUTHENTICATION.md           # Detailed authentication guide
+├── docs/                       # Project documentation
 ├── package.json
 └── package-lock.json
 ```
@@ -114,7 +114,7 @@ Signed-out users who open a protected page are sent to `/login`. After signing i
 4. A response interceptor signs the user out on a 401 (except for the login call itself) and shows a permission notice on a 403.
 5. The app reads the token's `exp` claim and signs the user out when it expires.
 
-The full flow, including how to test each case, is in [AUTHENTICATION.md](AUTHENTICATION.md).
+The full flow, including how to test each case, is in [AUTHENTICATION.md](docs/AUTHENTICATION.md).
 
 ## Configuration
 
@@ -189,7 +189,7 @@ The build must be served over HTTPS in production, because the token is stored i
 npm test
 ```
 
-This starts the Create React App test runner. The project does not have frontend tests yet. Authentication scenarios are listed as manual checks in [AUTHENTICATION.md](AUTHENTICATION.md).
+This starts the Create React App test runner. The project does not have frontend tests yet. Authentication scenarios are listed as manual checks in [AUTHENTICATION.md](docs/AUTHENTICATION.md).
 
 ## Troubleshooting
 
@@ -215,5 +215,5 @@ This starts the Create React App test runner. The project does not have frontend
 
 ## Further Reading
 
-- [AUTHENTICATION.md](AUTHENTICATION.md): sign-in flow, files, and manual test scenarios
+- [AUTHENTICATION.md](docs/AUTHENTICATION.md): sign-in flow, files, and manual test scenarios
 - The project-wide guide (backend, frontend, and API) is in the project documentation at the root of the workspace
